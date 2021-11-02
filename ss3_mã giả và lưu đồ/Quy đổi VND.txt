@@ -1,0 +1,6 @@
+Begin
+	Input N
+	M = N * 23000
+	Display M
+ Output "VND"
+End

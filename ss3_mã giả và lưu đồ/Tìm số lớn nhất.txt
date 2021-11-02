@@ -1,0 +1,31 @@
+Begin
+	Input A
+	Input B
+	Input C
+	IF A > B 
+	 IF A > C
+	  Display "A lớn nhất"
+	END IF
+	IF B > C
+	 IF B > A
+	  Display "B lớn nhất"
+	END IF
+	IF C > B
+	 IF C > A
+	  Display "C lớn nhất"
+	END IF
+End
+
+
+Begin
+	Input A
+	Input B
+	Input C
+	IF A > B AND A > C
+	  Display "A lớn nhất"
+	ELSE IF B > C
+	  Display "B lớn nhất"
+	ELSE
+	  Display "C lớn nhất"
+	END IF
+End
