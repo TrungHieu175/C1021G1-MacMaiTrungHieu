@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 1</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td>
+            Số A :
+        </td>
+        <td>
+            <input type="text" name="input_a" placeholder="Nhập số A"/>
+        </td>
+
+    </tr>
+    <tr>
+        <td>Số B :</td>
+        <td>
+            <input type="text" name="input_b" placeholder="Nhập số B"/>
+        </td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>
+            <button style="text-align: right" onclick="tinhtong()">Tính Tổng</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Kết quả là :
+        </td>
+        <td>
+            <span name="ketqua"></span>
+        </td>
+    </tr>
+
+</table>
+<script>
+    function tinhtong() {
+        let a = parseFloat(document.getElementsByName("input_a")[0].value)
+        let b = parseFloat(document.getElementsByName("input_b")[0].value)
+        if(isNaN(a) || isNaN(b))  {
+            alert("Nhập A và B theo định dạng số")
+        }else{
+            document.getElementsByName("ketqua")[0].innerText = a + b
+        }
+    }
+</script>
+</body>
+</html>

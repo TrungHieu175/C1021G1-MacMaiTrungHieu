@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td>
+           <span>Nhập số bất kì</span>
+        </td>
+            <td>
+                <input type="text" name="number" placeholder="1,2,3,....">
+            </td>
+        <td>
+            <button onclick="kiemtrachanle()">Kiểm tra chẵn lẻ</button>
+        </td>
+    </tr>
+    <tr>
+        <td>Kết quả :</td>
+        <td name="ketqua"></td>
+    </tr>
+</table>
+<script>
+    function kiemtrachanle(){
+        let a = parseFloat(document.getElementsByName("number")[0].value)
+        if (isNaN(a)){
+            alert("Hãy nhập giá trị A là số")
+        }else if(a % 2 == 0){
+            document.getElementsByName("ketqua")[0].innerText = "Số " + a + " là số chẵn"
+        }else{
+            document.getElementsByName("ketqua")[0].innerText = "Số " + a + " là số lẻ"
+        }
+
+    }
+</script>
+</body>
+</html>
