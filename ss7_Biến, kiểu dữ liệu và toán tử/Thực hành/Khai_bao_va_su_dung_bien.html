@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Khai Báo Biến</title>
+</head>
+<body>
+<script>
+    let i= 10
+    let f= 20.5
+    let b= true
+    let s = "Hà Nội"
+    document.write("i = " + i )
+    document.write("<br/>")
+    document.write("f = " + f )
+    document.write("<br/>")
+    document.write("s = " + s )
+    document.write("<br/>")
+    document.write("b = " + b )
+    document.write("<br/>")
+    let width= 20
+    let height= 10
+    let arena= width * height
+    document.write("Arena = " + arena)
+    let c = prompt("Nhập c")
+    let d = prompt("Nhập d")
+    if (isNaN(c,d)){
+        alert("Vui lòng nhập số")
+    }
+    else if (c % d == 0) {
+        alert("c là bội số của d ")
+    }
+    else {
+        alert("c không phải bội số của d")
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển tiền nè</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>
+            Amount
+        </th>
+        <th>
+            From Currency
+        </th>
+        <th>
+            To Currency
+        </th>
+    </tr>
+    <tr>
+        <td>
+            <input type="text" id="value" placeholder="Nhập số tiền">
+        </td>
+        <td>
+            <select id="select1">
+                <option value="VND">
+                    VND
+                </option>
+                <option value="USD">
+                    USD
+                </option>
+            </select>
+        </td>
+        <td>
+            <select id ="select2">
+                <option value="USD">
+                    USD
+                </option>
+                <option value="VND">
+                    VND
+                </option>
+            </select>
+        </td>
+        <td>
+            <button onclick="convert()">Convert</button>
+        </td>
+    </tr>
+    <tr>
+        <td>Result</td>
+        <td name="ketqua"></td>
+    </tr>
+</table>
+<script>
+    function convert() {
+        let sotien = parseInt(document.getElementById("value").value);
+        let luachon1 = document.getElementById("select1").value;
+        let luachon2 = document.getElementById("select2").value;
+        if (isNaN(sotien)){
+            alert("Vui lòng nhập số")
+        }else if (luachon1 == "VND" && luachon2 == "USD"){
+            document.getElementsByName("ketqua")[0].innerText = sotien / 24000
+        }else if (luachon1 == "USD" && luachon2 == "VND"){
+            document.getElementsByName("ketqua")[0].innerText = sotien * 24000
+        }else {
+            document.getElementsByName("ketqua")[0].innerText = sotien
+        }
+
+    }
+</script>
+</body>
+</html>
