@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập cấu trúc điều kiện 01</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>Kiểm tra chia hết</th>
+    </tr>
+    <tr>
+        <td><input type="text" id="soA" placeholder="Nhập số a"></td>
+        <td><input type="text" id="soB" placeholder="Nhập số b"></td>
+    </tr>
+    <tr>
+        <td><button onclick="kiemtra()">Kiểm tra</button></td>
+        <td id="ketqua"></td>
+    </tr>
+    <tr><td></td></tr>
+    <tr>
+        <th>Kiểm tra tuổi nhập học</th>
+    </tr>
+    <tr>
+        <td><input type="text" id="sotuoi" placeholder="Nhập số tuổi"></td>
+    </tr>
+    <tr>
+        <td><button onclick="kiemtratuoi()">Kiểm tra</button> </td>
+        <td id="ketquatuoi"></td>
+    </tr>
+    <tr>
+        <th>Nhập số xem lớn hay nhỏ hơn 0</th>
+    </tr>
+    <tr>
+        <td><input type="text" id="songuyen" placeholder="Nhập 1 số nguyên"></td>
+    </tr>
+    <tr>
+        <td><button onclick="kiemtravoi0()">Kiểm tra</button></td>
+        <td id="ketquasovoi0"></td>
+    </tr>
+    <tr>
+        <th>Tìm giá trị lớn nhất</th>
+    </tr>
+    <tr>
+        <td><input type="text" id="so1" placeholder="Nhập số thứ nhất"></td>
+        <td><input type="text" id="so2" placeholder="Nhập số thứ hai"></td>
+        <td><input type="text" id="so3" placeholder="Nhập số thứ ba"></td>
+    </tr>
+    <tr>
+        <td><button onclick="solonnhat()">Kiểm tra</button> </td>
+        <td id="ketquasolonnhat"></td>
+    </tr>
+    <tr>
+        <th>Xếp hạng học lực</th>
+    </tr>
+    <tr>
+        <td><input type="text" id="baikt" placeholder="Nhập điểm bài kiểm tra"></td>
+        <td><input type="text" id="giuaki" placeholder="Nhập điểm bài giữa kì"></td>
+        <td><input type="text" id="cuoiki" placeholder="Nhập điểm bài cuối kì"></td>
+    </tr>
+    <tr>
+        <td><button onclick="xemxephang()">Xem xếp hạng:</button></td>
+        <td id="xephang"></td>
+    </tr>
+    <tr>
+        <th>Tính Hoa Hồng</th>
+    </tr>
+    <tr>
+        <td><input type="text" id="doanhso" placeholder="Nhập doanh số"></td>
+    </tr>
+    <tr>
+        <td><button onclick="tinhhoahong">Tính hoa hồng</button></td>
+        <td id="hoahong"></td>
+    </tr>
+</table>
+<script>
+    function kiemtra() {
+        let a = document.getElementById("soA").value;
+        let b = document.getElementById("soB").value;
+        if (isNaN(a && b)){
+            alert("Vui Lòng Nhập Số")
+        }
+        else if (a % b == 0){
+            document.getElementById("ketqua").innerText = "Số " + a + " chia hết cho " + b
+        }
+        else
+            document.getElementById("ketqua").innerText = "Số " + a + " không chia hết cho " + b
+
+    }
+    function kiemtratuoi() {
+        let c = document.getElementById("sotuoi").value;
+        if (isNaN(c)){
+            alert("Vui lòng nhập số")
+        }
+        else if (c > 15){
+            document.getElementById("ketquatuoi").innerText = c + " tuổi hơi già so với lớp 10"
+
+        }
+        else if (c == 15){
+            document.getElementById("ketquatuoi").innerText = c + " đủ tuổi vào lớp 10"
+
+        }
+        else{
+            document.getElementById("ketquatuoi").innerText = c + " tuổi mà đòi vào lớp 10?"
+
+        }
+    }
+    function kiemtravoi0() {
+        let d = document.getElementById("songuyen").value;
+        if (isNaN(d)){
+            alert("Vui lòng nhập số")
+        }
+        else if (d > 0){
+            document.getElementById("ketquasovoi0").innerText = "Số " + d + " là số lớn hơn 0"
+
+        }
+        else if (d == 0){
+            document.getElementById("ketquasovoi0").innerText = "Số " + d + " là số 0"
+        }
+        else {
+            document.getElementById("ketquasovoi0").innerText = "Số " + d + " là số nhỏ hơn 0"
+
+        }
+
+    }
+    function solonnhat() {
+        let so1 = parseInt(document.getElementById("so1").value);
+        let so2 = parseInt(document.getElementById("so2").value);
+        let so3 = parseInt(document.getElementById("so3").value);
+        if (isNaN(so1 && so2 && so3)){
+            alert("Vui lòng nhập số")
+        }
+        else if (so1 > so2 && so1 > so3){
+            document.getElementById("ketquasolonnhat").innerText = "Số " + so1 + " là số lớn nhất"
+        }
+        else if (so2 > so3){
+            document.getElementById("ketquasolonnhat").innerText = "Số " + so2 + " là số lớn nhất"
+        }
+        else if (so3 > so2){
+            document.getElementById("ketquasolonnhat").innerText = "Số " + so3 + " là số lớn nhất"
+        }
+        else {
+            document.getElementById("ketquasolonnhat").innerText = " Không số nào lớn nhất"
+        }
+    }
+    function xemxephang() {
+        let diemkt = parseFloat(document.getElementById("baikt").value)
+        let diemgk = parseFloat(document.getElementById("giuaki").value)
+        let diemck = parseFloat(document.getElementById("cuoiki").value)
+        let diemtrungbinh = (diemkt + diemgk + diemck) / 3
+        if (isNaN(diemkt || diemgk || diemck)){
+            alert("Vui lòng nhập điểm")
+        }
+        else if (diemtrungbinh > 8){
+            document.getElementById("xephang").innerText = "Hạng A"
+        }
+        else if (diemtrungbinh >= 5){
+            document.getElementById("xephang").innerText = "Hạng B"
+        }
+        else {
+            document.getElementById("xephang").innerText = "Hạng C"
+        }
+    }
+</script>
+</body>
+</html>

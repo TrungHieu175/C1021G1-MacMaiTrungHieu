@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng tính toán</title>
+</head>
+<body>
+<form>
+    <h1>
+        Caculator
+    </h1>
+    <table>
+        <tr>
+            <td><input type="text" placeholder="Nhập số" name="so1"></td>
+        </tr>
+        <tr>
+            <td><input type="text" placeholder="Nhập số" name="so2"><br></td>
+        </tr>
+        <tr>
+            <td>
+                <button onclick="Cong">Addition(+)</button>
+                <button onclick="Tru">Subtraction(-)</button>
+                <button onclick="Nhan">Multiplication(X)</button>
+                <button onclick="Chia">Division(/)</button>
+            </td>
+        </tr>
+       <tr>
+           <td>Result Division :</td>
+           <td name="ketqua"></td>
+       </tr>
+    </table>
+</form>
+<script>
+    function Cong() {
+        let giatri1 = parseInt(document.getElementsByName("so1"))[0].value;
+        let giatri2 = parseInt(document.getElementsByName("so2"))[0].value;
+        if (isNaN(giatri1 || giatri2)){
+            alert("Vui lòng nhập số")
+        }
+        else{
+            document.getElementsByName("ketqua")[0].innerText = giatri1 + giatri2
+        }
+    }
+</script>
+</body>
+</html>
