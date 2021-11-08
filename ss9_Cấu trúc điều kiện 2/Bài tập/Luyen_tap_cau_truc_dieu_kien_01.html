@@ -69,8 +69,18 @@
         <td><input type="text" id="doanhso" placeholder="Nhập doanh số"></td>
     </tr>
     <tr>
-        <td><button onclick="tinhhoahong">Tính hoa hồng</button></td>
+        <td><button onclick="tinhhoahong()">Tính hoa hồng</button></td>
         <td id="hoahong"></td>
+    </tr>
+    <tr>
+        <th>Tính cước điện thoại</th>
+    </tr>
+    <tr>
+        <td><input type="text" id="sophut" placeholder="Nhập số phút gọi"></td>
+    </tr>
+    <tr>
+        <td><button onclick="tinhtien()">Tính tiền</button></td>
+        <td id="inra"></td>
     </tr>
 </table>
 <script>
@@ -159,6 +169,39 @@
         }
         else {
             document.getElementById("xephang").innerText = "Hạng C"
+        }
+    }
+    function tinhhoahong() {
+        let doanhso = parseFloat(document.getElementById("doanhso").value);
+        let tren10tr = parseFloat(doanhso * 0.1)
+        let tren5tr = parseFloat(doanhso * 0.05)
+        let duoi5tr = parseFloat(doanhso * 0.03)
+        if (isNaN(doanhso)){
+            alert("Vui lòng nhập số")
+        }
+        else if (doanhso >= 10000000){
+            document.getElementById("hoahong").innerText = "Doanh số hơn 10Tr có 10% hoa hồng số tiền được nhận là:  " + tren10tr
+        }
+        else if (doanhso >= 5000000){
+            document.getElementById("hoahong").innerText = "Doanh số hơn 5Tr có 5% hoa hồng số tiền được nhận là:  " + tren5tr
+        }
+        else {
+            document.getElementById("hoahong").innerText = "Doanh số dưới 5Tr có 3% hoa hồng số tiền được nhận là:  " + duoi5tr
+        }
+    }
+    function tinhtien() {
+        let sophut = parseFloat(document.getElementById("sophut").value);
+        if (isNaN(sophut)){
+            alert("Vui lòng nhập số")
+        }
+        else if (sophut <= 50){
+            document.getElementById("inra").innerText = 600 * sophut + 25000
+        }
+        else if (sophut < 200){
+            document.getElementById("inra").innerText = 400 * sophut + 25000
+        }
+        else {
+            document.getElementById("inra").innerText = 200 * sophut + 25000
         }
     }
 </script>

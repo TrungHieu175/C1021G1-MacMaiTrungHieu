@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài luyện tập 2</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>Chuyển nhiệt độ C và F</th>
+    </tr>
+    <tr>
+        <td><input type="text" id="nhietdo" placeholder="Nhập nhiệt độ"></td>
+        <td><select id="luachon1">
+            <option>Độ C</option>
+            <option>Độ F</option>
+        </select></td>
+        <td><select id="luachon2">
+            <option>Độ F</option>
+            <option>Độ C</option>
+        </select> </td>
+    </tr>
+    <tr>
+        <td><button onclick="Chuyendoi()">Chuyển đổi</button></td>
+        <td id="ketqua"></td>
+    </tr>
+    <tr>
+        <th>Chuyển từ mét sang feet</th>
+    </tr>
+    <tr>
+        <td><input type="text" id="khoangcach" placeholder="Nhập số"></td>
+        <td><select id="luachondau">
+            <option>Mét</option>
+            <option>Feet</option>
+        </select></td>
+        <td><select id="luachoncuoi">
+            <option>Feet</option>
+            <option>Mét</option>
+        </select> </td>
+    </tr>
+    <tr>
+        <td><button onclick="Doi()">Chuyển đổi</button></td>
+        <td id="ketqua2"></td>
+    </tr>
+</table>
+<script>
+    function Chuyendoi() {
+        let nhietdo = parseFloat(document.getElementById("nhietdo").value);
+        let luachon1 = parseFloat(document.getElementById("luachon1").value);
+        let luachon2 = parseFloat(document.getElementById("luachon2").value);
+        let quydoiF = nhietdo * 9/5 + 32
+        let quydoiC = (nhietdo - 32) * 5/9
+        if (luachon1 == "Độ C" && luachon2 == "Độ F"){
+            document.getElementById("ketqua").innerText = nhietdo + " Độ C bằng " + quydoiF + " Độ F"
+        }
+        else if (luachon1 == "Độ F" && luachon2 == "Độ C"){
+            document.getElementById("ketqua").innerText = nhietdo + " Độ F bằng " + quydoiC + " Độ C"
+        }
+        else{
+            document.getElementById("ketqua").innerText = nhietdo
+        }
+    }
+    function Doi() {
+        let khoangcach = parseFloat(document.getElementById("khoangcach").value);
+        let luachondau = parseFloat(document.getElementById("luachondau").value);
+        let luachoncuoi = parseFloat(document.getElementById("luachoncuoi").value);
+        let quydoifeet = khoangcach * 3.2808
+        let quydoimet = khoangcach / 3.2808
+        if (luachondau == "Mét" && luachoncuoi == "Feet"){
+            document.getElementById("ketqua2").innerText = khoangcach + " Mét bằng " + quydoifeet + " Feet"
+        }
+        else if (luachondau == "Feet" && luachoncuoi == "Mét"){
+            document.getElementById("ketqua2").innerText = khoangcach + " Feet bằng " + quydoimet + " Mét"
+        }
+        else{
+            document.getElementById("ketqua2").innerText = khoangcach
+        }
+    }
+</script>
+</body>
+</html>
