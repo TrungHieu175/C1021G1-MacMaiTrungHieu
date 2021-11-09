@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đừng bấm nút no</title>
+</head>
+<body>
+<h1>Do you love me</h1>
+<button style="margin-right: 10px" id="btn_Yes" onclick="alert('<3')">Yes</button><button id="btn_No" style="position: relative" onmouseover="changePosition()">No</button>
+<script>
+    function changePosition(){
+        let random_top = Math.floor(Math.random() * (window.innerHeight + 1) + 0)
+        let random_left = Math.floor(Math.random() * (window.innerWidth + 1) + 0)
+        document.getElementById("btn_No").style.left = random_left + "px";
+        document.getElementById("btn_No").style.top = random_top + "px";
+    }
+</script>
+</body>
+</html>

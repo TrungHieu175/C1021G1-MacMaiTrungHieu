@@ -140,6 +140,7 @@
         let numberB = parseFloat(getValueById("numberB"));
         let numberC = parseFloat(getValueById("numberC"));
         let delta = numberB*numberB - 4*numberA*numberC;
+        console.log(delta)
         let x_1 = 0;
         let x_2 = 0;
         if (numberA == 0){
@@ -149,10 +150,13 @@
             document.getElementById("ketquabac2").innerText = "Vô nghiệm"
         }
         else if(delta == 0){
-            getValueById("ketquabac2").innerText = "Phương trình có nghiệm kép " + -numberB / 2 * numberA
+            x_1 = x_2 = -numberB / 2 * numberA;
+            document.getElementById("ketquabac2").innerText = "Phương trình có nghiệm kép " + x_1
         }
-        else (delta > 0){
-            getValueById("kequabac2").innerText = "Phương trình có 2 nghiệm phân biệt X1 = " + (-numberB + Math.sqrt(delta)) / 2 + " X2 = " + (-numberB - Math.sqrt(delta)) / 2
+        else {
+            x_1 = (-numberB + (Math.sqrt(delta))) / 2;
+            x_2 = (-numberB - (Math.sqrt(delta))) / 2
+            document.getElementById("ketquabac2").innerText = "Phương trình có 2 nghiệm phân biệt X1 = " + x_1 + " X2 = " + x_2
         }
     }
     function getValueById(id){
