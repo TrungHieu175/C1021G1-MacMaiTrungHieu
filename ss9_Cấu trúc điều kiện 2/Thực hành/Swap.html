@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>Nhập A</td>
+            <td><input id="a" type="text"/></td>
+        </tr>
+        <tr>
+            <td>Nhập B</td>
+            <td><input id="b" type="text"/></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><button onclick="Swap()">Swap</button></td>
+        </tr>
+        <tr>
+            <td>Ket qua:</td>
+            <td><span id="result"></span></td>
+        </tr>
+    </table>
+<script>
+    function Swap(){
+        let a = document.getElementById("a").value;
+        let b = document.getElementById("b").value;
+        /* let temp = a;
+        a = b;
+        b= temp; */
+        document.getElementById("result").innerText = "so A va B sau khi swap la " + b + " va " + a;
+    }
+</script>
+</body>
+</html>
