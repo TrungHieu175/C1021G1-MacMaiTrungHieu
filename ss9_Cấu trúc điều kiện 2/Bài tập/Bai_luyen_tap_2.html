@@ -87,6 +87,60 @@
         <td><button onclick="giai_bac_2()">Giải phương trình</button></td>
         <td id="ketquabac2"></td>
     </tr>
+    <tr>
+        <th>Tính diện tích hình vuông</th>
+    </tr>
+    <tr>
+        <td><input type="text" id="angle" placeholder="Nhập cạnh hình vuông"></td>
+    </tr>
+    <tr>
+        <td><button onclick="tinhdientich()">Tính diện tích</button></td>
+        <td id="dt_hinhvuong"></td>
+    </tr>
+    <tr>
+        <th>Tính diện tích hình chữ nhật</th>
+    </tr>
+    <tr>
+        <td><input type="text" placeholder="Nhập cạnh a" id="CanhA"></td>
+        <td><input type="text" placeholder="Nhập cạnh b" id="CanhB"></td>
+    </tr>
+    <tr>
+        <td><button onclick="dientichCN()">Tính diện tích</button></td>
+        <td id="DientichCn"></td>
+    </tr>
+    <tr>
+        <th>Tính diện tích tam giác vuông</th>
+    </tr>
+    <tr>
+        <td><input type="text" placeholder="Nhập cạnh a" id="canhTGA"></td>
+        <td><input type="text" placeholder="Nhập cạnh b" id="canhTGB"></td>
+    </tr>
+    <tr>
+        <td><button onclick="dientichHTG()">Tính diện tích</button></td>
+        <td id="DientichHTG"></td>
+    </tr>
+    <tr>
+        <th>Kiểm tra có phải tuổi người</th>
+    </tr>
+    <tr>
+        <td><input type="text" placeholder="Nhập số bất kì" id="soNguyen"></td>
+    </tr>
+    <tr>
+        <td><button onclick="tinhTuoi()">Kiểm tra</button></td>
+        <td id="tuoiNguoi"></td>
+    </tr>
+    <tr>
+        <th>Kiểm tra có phải cạnh một tam giác</th>
+    </tr>
+    <tr>
+        <td><input type="text" placeholder="Nhập cạnh a" id="TGA"></td>
+        <td><input type="text" placeholder="Nhập cạnh b" id="TGB"></td>
+        <td><input type="text" placeholder="Nhập cạnh c" id="TGC"></td>
+    </tr>
+    <tr>
+        <td><button onclick="canhTG()">Kiểm tra</button></td>
+        <td id="resulttriangle"></td>
+    </tr>
 </table>
 <script>
     function Convert() {
@@ -162,6 +216,38 @@
     function getValueById(id){
         return document.getElementById(id).value;
         
+    }
+    function tinhdientich() {
+        let canha = document.getElementById("angle").value;
+        document.getElementById("dt_hinhvuong").innerText = "Diện tích hình vuông là " + canha * canha
+    }
+    function dientichCN() {
+        let canhA = parseInt(document.getElementById("CanhA").value);
+        let canhB = parseInt(document.getElementById("CanhB").value);
+        document.getElementById("DientichCn").innerText = "Diện tích hình chữ nhật là " + canhA * canhB
+    }
+    function dientichHTG() {
+        let canhTGA = parseInt(document.getElementById("canhTGA").value);
+        let canhTGB = parseInt(document.getElementById("canhTGB").value);
+        document.getElementById("DientichHTG").innerText = "Diện tích hình tam giác vuông là " + (0.5 * (canhTGA * canhTGB))
+    }
+    function tinhTuoi() {
+        let soNguyen = parseInt(document.getElementById("soNguyen").value);
+        if (soNguyen < 120 && soNguyen > 0)
+            document.getElementById("tuoiNguoi").innerText = "Tuổi con người"
+        else
+            document.getElementById("tuoiNguoi").innerText = "Tuổi con gì chứ ko phải người"
+    }
+    function canhTG() {
+        let TGA = parseInt(document.getElementById("TGA").value);
+        let TGB = parseInt(document.getElementById("TGB").value);
+        let TGC = parseInt(document.getElementById("TGC").value);
+        //if(TGA,TGB,TGC > 0)
+            document.getElementById("resulttriangle").innerText =  " 3 cạnh A,B,C là cạnh của tam giác"
+        else if(TGA + TGB > TGC)
+            document.getElementById("resulttriangle").innerText =  " 3 cạnh A,B,C là cạnh của tam giác"
+
+
     }
 </script>
 </body>
