@@ -141,6 +141,13 @@
         <td><button onclick="canhTG()">Kiểm tra</button></td>
         <td id="resulttriangle"></td>
     </tr>
+    <tr>
+        <td><input type="text" placeholder="Nhập số KW" id="soKW"></td>
+    </tr>
+    <tr>
+        <td><button onclick="tinhGiaDien()">Tính tiền điện</button></td>
+        <td id="soTienDien"></td>
+    </tr>
 </table>
 <script>
     function Convert() {
@@ -242,12 +249,44 @@
         let TGA = parseInt(document.getElementById("TGA").value);
         let TGB = parseInt(document.getElementById("TGB").value);
         let TGC = parseInt(document.getElementById("TGC").value);
-        //if(TGA,TGB,TGC > 0)
+        if(TGA,TGB,TGC > 0)
             document.getElementById("resulttriangle").innerText =  " 3 cạnh A,B,C là cạnh của tam giác"
         else if(TGA + TGB > TGC)
             document.getElementById("resulttriangle").innerText =  " 3 cạnh A,B,C là cạnh của tam giác"
-
-
+    }
+    function tinhGiaDien() {
+        let soKW = document.getElementById("soKW").value;
+        let bac1 = 50 * 1.678;
+        let bac2 = (soKW - 50) * 1.734
+        let bac3 = (soKW - 100) * 2.014
+        let bac4 = (soKW - 200) * 2.536
+        let bac5 = (soKW - 300) * 2.834
+        let bac6 = (soKW - 400) * 2.927
+        let tongTien;
+        if(soKW <= 50){
+            tongTien = bac1;
+            document.getElementById("soTienDien").innerText = "Số tiền điện là " + (tongTien + (tongTien * 0.1))
+        }
+        if(soKW > 50 && soKW <= 100){
+            tongTien = (bac1 + bac2);
+            document.getElementById("soTienDien").innerText = "Số tiền điện là " + (tongTien + (tongTien * 0.1))
+        }
+        if(soKW > 100 && soKW <= 200){
+            tongTien = (bac1 + bac2 + bac3)
+            document.getElementById("soTienDien").innerText = "Số tiền điện là " + (tongTien + (tongTien * 0.1))
+        }
+        if(soKW > 200 && soKW <= 300){
+            tongTien = (bac1 + bac2 + bac3 + bac4)
+            document.getElementById("soTienDien").innerText = "Số tiền điện là " + (tongTien + (tongTien * 0.1))
+        }
+        if(soKW > 300 && soKW <= 400){
+            tongTien = (bac1 + bac2 + bac3 + bac5)
+            document.getElementById("soTienDien").innerText = "Số tiền điện là " + (tongTien + (tongTien * 0.1))
+        }
+        if(soKW > 400){
+            tongTien = (bac1 + bac2 + bac3 + bac5 + bac6)
+            document.getElementById("soTienDien").innerText = "Số tiền điện là " + (tongTien + (tongTien * 0.1))
+        }
     }
 </script>
 </body>
