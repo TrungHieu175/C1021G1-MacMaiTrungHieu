@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test vong lap long nhau</title>
+</head>
+<body>
+<script>
+   let sout = "<table border='1' width='300' cellspacing='0' cellpadding='3' >"
+    for(i = 1;i < 100;i += 10){
+        sout = sout + "<tr>";
+        let cout = i;
+        for(j = 1;j <= 10;j++){
+            sout = sout + "<td>" + cout++ + "</td>";
+        }sout = sout + "</tr>";
+    }
+    sout = sout + "</table>";
+    document.write(sout);
+</script>
+</body>
+</html>
