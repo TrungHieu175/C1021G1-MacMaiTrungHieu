@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 3</title>
+</head>
+<body>
+<script>
+    let numerators = [5, 2, 5];
+    let denominators = [6, 3, 4];
+    let max = 0
+    let result = 0
+    function maxFraction() {
+        for (i = 0; i < numerators.length; i++) {
+           for (j= 0; j < denominators.length; j++) {
+               let div = numerators[i] / denominators[j]
+               if (i == 0 && j == 0) {
+                   max = div;
+                   continue;
+               }
+               if (max < div) {
+                   max = div;
+                   result = j;
+               }
+               console.log(max)
+           }
+        }
+        console.log (result)
+    }
+    maxFraction()
+</script>
+</body>
+</html>

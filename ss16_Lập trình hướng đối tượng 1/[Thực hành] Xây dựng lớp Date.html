@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Date mtf</title>
+</head>
+<body>
+<script>
+    class MyDate {
+        constructor(day,month,year) {
+            this.day = day;
+            this.month = month;
+            this.year = year;
+        }
+
+        // Return Day
+        getDay() {
+            return this.day;
+        }
+
+        // Return Month
+        getMonth() {
+            return this.month;
+        }
+        // Return Year
+        getYear() {
+            return this.year;
+        }
+        getDate() {
+            return  this.day + "/" + this.month +  "/" + this.year
+        }
+        // Set Day
+        setDay(day) {
+            this.day = day;
+        }
+        // Set Month
+        setMonth(month) {
+            this.month = month;
+        }
+        // Set Year
+        setYear(year) {
+            this.year = year;
+        }
+    }
+    let date = new MyDate(10,5,1995);
+    document.write("Sinh nhật Khải là: " + date.getDate() + "<br/>")
+    date.setDay(17)
+    document.write("Sinh nhật Hiếu là: " + date.getDate() + "<br/>")
+    document.write(date.day)
+</script>
+</body>
+</html>

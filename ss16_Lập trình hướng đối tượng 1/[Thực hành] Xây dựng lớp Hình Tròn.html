@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vẽ hình tròn</title>
+</head>
+<body>
+<div id="smallCircle"></div>
+<script>
+class Circle {
+    constructor(radius,color) {
+        this.radius = radius;
+        this.color = color;
+    }
+    getRadius() {
+        return this.radius;
+    }
+    getArea() {
+        return Math.PI * this.radius * this.radius;
+    }
+}
+let smallCircle = new Circle(10,"Black");
+let bigCircle = new Circle(20,"Yellow");
+document.write("Diện tích hình tròn lớn là: " + bigCircle.getArea().toFixed(2))
+</script>
+</body>
+</html>

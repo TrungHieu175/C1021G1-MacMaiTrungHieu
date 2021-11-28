@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Telephone</title>
+</head>
+<body>
+<script>
+    class Mobiphone {
+        constructor(phoneNumber, brand, power,status) {
+            this.phoneNumber = phoneNumber;
+            this.brand = brand;
+            this.power = power;
+            this.typingMessage = [];
+            this.inboxMessage = [];
+            this.sentMessage = [];
+            this.status = status;
+        }
+        checkStatus() {
+            let status = this.status == true ? "On" : "Off";
+            document.write("Status:" + status);
+        }
+        tunrOn() {
+             if (this.power > 0) {
+                 this.status = true;
+                 this.decreasePower();
+             } else {
+                 alert("Out of Power")
+             }
+        }
+        tunrOff() {
+             this.status = false;
+        }
+        charge() {
+            for (i = this.power; i <= 100; i++) {
+                this.power = i;
+                document.write(this.power);
+            }
+            if (this.power == 100) {
+                document.write("Full power")
+            }
+        }
+        typingMessage(message) {
+            if (!status) {
+                document.write("Turn on the phone");
+            }else {
+                this.typingMessage = message;
+            }
+            this.decreasePower();
+        }
+        receiveMessage(content, sentPhoneNumber) {
+            let sentDate = new Date();
+            let newMessage = {}
+            newMessage.phoneNumber = sentPhoneNumber;
+            newMessage.content = content;
+            newMessage.sentDate = sentDate.getDate();
+            this.decreasePower()
+            this.inboxMessage.push(newMessage);
+
+        }
+        sendMessage(content, receiverPhoneNumber) {
+            let sentDate = new Date();
+            let newMessage = {}
+            newMessage.phoneNumber = receiverPhoneNumber;
+            newMessage.content = content;
+            newMessage.sentDate = sentDate.getDate();
+            this.sentMessage.push(newMessage)
+            this.decreasePower()
+        }
+        getSentMessage() {
+            this.sentMessage.forEach(function (item, index) {
+                document.write("Sent to: " + item.phoneNumber + "<br/>" + "Content: " + item.content + "<br/>" + "Sent date: " + item.sentDate + "<br/>");
+            })
+            this.decreasePower();
+        }
+        getInboxMessage() {
+            this.inboxMessage.forEach(function (item, index) {
+                document.write("Sent from: " + item.phoneNumber + "<br/>" + "Content: " + item.content + "<br/>" + "Sent date: " + item.sentDate + "<br/>");
+            })
+            this.decreasePower();
+        }
+        decreasePower() {
+            if (this.power > 0) {
+                this.power--;
+            }
+        }
+        getPower() {
+            document.write("The Power is: " + this.power + "%");
+        }
+    }
+    let nokia = new Mobiphone('0935122684','Nokia',80,true)
+    let iphone = new Mobiphone('0931910JQK','Iphone',50,true)
+    iphone.sendMessage("Hello World", nokia.phoneNumber);
+    nokia.receiveMessage("Hello World", iphone.phoneNumber)
+    iphone.sendMessage("Hello World2", nokia.phoneNumber);
+    iphone.getSentMessage();
+    iphone.getPower()
+    nokia.getInboxMessage();
+</script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Menu nè</title>
+</head>
+<body>
+<script>
+    let menu = "Nhập món: \n" +
+        "1.(cafe) \n"+
+        "2.(cam vắt)\n" +
+        "3.(nước ép cà rốt)\n" +
+        "4.(nước ép cà chua)\n" +
+        "5.(nước lọc)\n" +
+        "6.(nước dừa)\n" +
+        "7.(thoát gọi món)"
+    let choose = 0;
+    let total = 0;
+    do {
+        choose = parseInt(prompt(menu));
+        let amout = 0;
+        let price = 0;
+        switch (choose) {
+            case 1:
+                price = 15000;
+                break;
+            case 2:
+                price = 18000;
+                break;
+            case 3:
+                price = 13000;
+                break;
+            case 4:
+                price = 10000;
+                break;
+            case 5:
+                price = 8000;
+                break;
+            case 6:
+                price = 17000;
+                break;
+            default:
+                continue;
+        }
+        amout = parseInt(prompt("Nhập số lượng:"));
+        total += amout * price;
+    }
+    while (choose == 7);
+    alert("Tổng tiền là: " + total);
+</script>
+</body>
+</html>

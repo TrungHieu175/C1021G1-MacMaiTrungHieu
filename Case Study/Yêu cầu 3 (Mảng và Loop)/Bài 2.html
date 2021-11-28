@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>study motf</title>
+</head>
+<body>
+<div id="square"></div>
+<script>
+    // let width = prompt("Nhập chiều rộng")
+    // let height = prompt("Nhập chiều cao")
+    // let string = ""
+    // for (i = 1; i <= height; i++) {
+    //     for (j = 1; j <= width; j++) {
+    //         if (i == 1 || j == 1 || i == height || j == width) {
+    //             string += "*"
+    //         }
+    //         else {
+    //             string += "&nbsp;"
+    //         }
+    //     }
+    //     string += "<br/>"
+    // }
+    // document.getElementById("square").innerHTML = string
+    function findMissingValue() {
+        let arr1 = [7,2,5,3,5,3];
+        let arr2 = [7,2,5,4,6,3,5,3];
+        let flag = false;
+        let resultArray = []
+        for (i = 0; i < arr2.length; i++) {
+            for(j=0; j < arr1.length; j++) {
+                if (arr2[i] == arr1[j]) {
+                    flag = true;
+                }
+            }
+            if(!flag){
+                resultArray.push(arr2[i])
+            }
+            flag = false;
+        }
+        console.log(resultArray)
+    }
+    findMissingValue()
+</script>
+</body>
+</html>
