@@ -6,36 +6,30 @@
 </head>
 <body>
 <script>
-    // let n = prompt("Nhập 1 số")
-    // let count = 0
-    // let arr = []
-    // for (i = 2; count < n; i++) {
-    //     if (i == 2) {
-    //         arr.push(i);
-    //         count ++;
-    //     }
-    //     if (checkSnt(i)){
-    //         arr.push(i);
-    //         count++;
-    //     }
-    // }
-    // function checkSnt(number) {
-    //     for (k=2; k < number; k++){
-    //         if(number%k==0){
-    //             return false;
-    //         }
-    //         else{
-    //             return true;
-    //         }
-    //     }
-    // }
-    // console.log(arr)
-    let i =0;
-    while (i<5) {
-        i =1;
-        alert("Hello");
-        i++;
+    let n = prompt("Nhập 1 số")
+    let count = 0
+    let arr = []
+    for (i = 2; count < n; i++) {
+        if (i == 2) {
+            arr.push(i);
+            count ++;
+        }
+        if (checkSnt(i)){
+            arr.push(i);
+            count++;
+        }
     }
+    function checkSnt(number) {
+        for (k=2; k < number; k++){
+            if(number%k==0){
+                return false;
+            }
+            else{
+                return true;
+            }
+        }
+    }
+    console.log(arr)
 </script>
 </body>
 </html>
