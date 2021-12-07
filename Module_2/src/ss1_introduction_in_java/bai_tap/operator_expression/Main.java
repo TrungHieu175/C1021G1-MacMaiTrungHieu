@@ -1,0 +1,24 @@
+package ss1_introduction_in_java.bai_tap.operator_expression;
+
+import java.sql.SQLOutput;
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        float width;
+        float height;
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter width: ");
+        width = scanner.nextFloat();
+
+        System.out.print("Enter height: ");
+        height = scanner.nextFloat();
+        float area = width * height;
+
+        System.out.println("Area is: " + area);
+    }
+}
