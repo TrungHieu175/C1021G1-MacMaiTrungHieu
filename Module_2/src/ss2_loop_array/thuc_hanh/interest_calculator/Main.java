@@ -1,4 +1,4 @@
-package ss1_introduction_in_java.bai_tap.interest_calculator;
+package ss2_loop_array.thuc_hanh.interest_calculator;
 
 import java.util.Scanner;
 

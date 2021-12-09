@@ -1,4 +1,4 @@
-package ss1_introduction_in_java.bai_tap.is_prime;
+package ss2_loop_array.thuc_hanh.is_prime;
 
 import java.util.Scanner;
 
