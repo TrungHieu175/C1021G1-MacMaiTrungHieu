@@ -1,0 +1,36 @@
+package ss2_loop_array.thuc_hanh.tim_gia_tri_lon_nhat;
+
+import java.util.Scanner;
+
+public class Timgiatrilonnhat {
+    public static void main(String[] args) {
+        int size;
+        int[] array;
+        Scanner scanner = new Scanner(System.in);
+        do {
+            System.out.println("Enter a size");
+            size = scanner.nextInt();
+            if (size > 20) {
+                System.out.println("Size should not exceed 20");
+            }
+        }while (size > 20);
+        array = new int[size];
+        for (int i = 0; i < array.length; i++) {
+            System.out.println("Enter element " + (i + 1) + " : ");
+            array[i] = scanner.nextInt();
+        }
+        System.out.println("Propety list: ");
+        for (int a : array) {
+            System.out.print(a + "\t");
+        }
+        int max = array[0];
+        int index = 1;
+        for (int j = 0; j < array.length; j++) {
+            if (array[j] > max) {
+                max = array[j];
+                index = j + 1;
+            }
+        }
+        System.out.println("The largest property value in the list is " + max + " ,at position " + index);
+    }
+}
