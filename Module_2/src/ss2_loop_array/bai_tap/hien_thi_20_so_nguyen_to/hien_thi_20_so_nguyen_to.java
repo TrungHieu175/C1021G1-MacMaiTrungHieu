@@ -1,4 +1,4 @@
-package ss2_loop_array.bai_tap;
+package ss2_loop_array.bai_tap.hien_thi_20_so_nguyen_to;
 
 import java.util.Scanner;
 
