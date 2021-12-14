@@ -1,4 +1,4 @@
-package ss7_abstract_class_Interface.thuc_hanh;
+package ss7_abstract_class_Interface.thuc_hanh.animal;
 
 public class Chicken extends Animal {
     @Override
