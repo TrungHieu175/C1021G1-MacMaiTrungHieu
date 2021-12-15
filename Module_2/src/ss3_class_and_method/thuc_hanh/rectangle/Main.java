@@ -3,7 +3,8 @@ package ss3_class_and_method.thuc_hanh.rectangle;
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) {
+    private static int[] arr;
+        public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter the width:");
         double width = scanner.nextDouble();
@@ -14,5 +15,4 @@ public class Main {
         System.out.println("Perimeter of the Rectangle: "+ rectangle.getPerimeter());
         System.out.println("Area of the Rectangle: "+ rectangle.getArea());
     }
-  
 }
