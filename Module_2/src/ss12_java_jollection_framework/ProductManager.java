@@ -11,7 +11,7 @@ public class ProductManager {
         listProduct.remove(new Product(id));
     }
     public static void edit(int id, Product product){
-        listProduct.set(new Product(id), product);
+        listProduct.set(id, product);
     }
     public static void main(String[] args) {
         listProduct = new ArrayList<Product>();
