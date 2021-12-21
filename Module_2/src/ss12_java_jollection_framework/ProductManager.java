@@ -10,9 +10,15 @@ public class ProductManager {
     public static void remove(int id) {
         listProduct.remove(new Product(id));
     }
+<<<<<<< HEAD
 //    public static void edit(int id, Product product){
 //        listProduct.set(product);
 //    }
+=======
+    public static void edit(int id, Product product){
+        listProduct.set(id, product);
+    }
+>>>>>>> affd15335c7cc68f9217520fc6080168ef0cd019
     public static void main(String[] args) {
         listProduct = new ArrayList<Product>();
         Product p1 = new Product(1, "Laptop", 1000000);
