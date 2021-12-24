@@ -16,10 +16,23 @@ public class InsertionSort {
         for (double l : list) {
             System.out.print(l + "\t");
         }
-    }
-    public static void insertionSort(double[] list) {
-        for (int i = 1; i < list.length; i++) {
-            
+        System.out.println();
+        System.out.println("Sorted array");
+        insertionSort(list);
+        for (double l : list) {
+            System.out.print(l + "\t");
         }
     }
-}
+    public static void insertionSort(double[] arr) {
+        double x;
+        int pos;
+            for (int i = 1; i < arr.length; i++) {
+                pos = i;
+                x = arr[i];
+                for (; pos > 0 && arr[pos -1] > x; pos--){
+                    arr[pos] = arr[pos - 1];
+                }
+                arr[pos] = x;
+            }
+        }
+    }
