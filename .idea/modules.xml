@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/CodeGym.iml" filepath="$PROJECT_DIR$/.idea/CodeGym.iml" />
+      <module fileurl="file://$PROJECT_DIR$/FuramaResort/FuramaResort.iml" filepath="$PROJECT_DIR$/FuramaResort/FuramaResort.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Module_2/Module_2.iml" filepath="$PROJECT_DIR$/Module_2/Module_2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Module_2/src/Module_21.iml" filepath="$PROJECT_DIR$/Module_2/src/Module_21.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Module_2/src/ss1_introduction_in_java/ss1_introduction_in_java.iml" filepath="$PROJECT_DIR$/Module_2/src/ss1_introduction_in_java/ss1_introduction_in_java.iml" />
+    </modules>
+  </component>
+</project>
