@@ -1,4 +1,4 @@
-package ss6_inheritance;
+package ss6_inheritance.thuc_hanh;
 
 class ChuNhat {
     public int rong, dai;
