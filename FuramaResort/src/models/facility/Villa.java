@@ -1,14 +1,12 @@
 package models.facility;
 
-import models.facility.Facility;
-
 public class Villa extends Facility {
     private String classRoom;
     private double areaPool;
     private int stage;
 
-    public Villa(String nameSevice, double areaUse, double price, int person, int daily, String classRoom, double areaPool, int stage) {
-        super(nameSevice, areaUse, price, person, daily);
+    public Villa(String nameSevice, double areaUse, double price, int person, int daily, int serviceId, String classRoom, double areaPool, int stage) {
+        super(nameSevice, areaUse, price, person, daily, serviceId);
         this.classRoom = classRoom;
         this.areaPool = areaPool;
         this.stage = stage;
@@ -16,6 +14,7 @@ public class Villa extends Facility {
 
     public Villa() {
     }
+
 
     public String getClassRoom() {
         return classRoom;

@@ -6,8 +6,8 @@ public class House extends Facility {
     private String classRoom;
     private int stage;
 
-    public House(String nameSevice, double areaUse, double price, int person, int daily, String classRoom, int stage) {
-        super(nameSevice, areaUse, price, person, daily);
+    public House(String nameSevice, double areaUse, double price, int person, int daily, int serviceId, String classRoom, int stage) {
+        super(nameSevice, areaUse, price, person, daily, serviceId);
         this.classRoom = classRoom;
         this.stage = stage;
     }

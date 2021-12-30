@@ -1,7 +1,7 @@
 package models.person;
 
 public abstract class Person {
-    private String id;
+    private int id;
     private String fullName;
     private String birthDay;
     private String gender;
@@ -9,7 +9,7 @@ public abstract class Person {
     private String phoneNumber;
     private String email;
 
-    public Person(String id, String fullName, String birthDay, String gender, String idCard, String phoneNumber, String email) {
+    public Person(int id, String fullName, String birthDay, String gender, String idCard, String phoneNumber, String email) {
         this.id = id;
         this.fullName = fullName;
         this.birthDay = birthDay;
@@ -22,11 +22,11 @@ public abstract class Person {
     public Person() {
     }
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 

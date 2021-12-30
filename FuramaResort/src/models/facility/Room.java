@@ -5,8 +5,8 @@ import models.facility.Facility;
 public class Room extends Facility {
     private String freeSevice;
 
-    public Room(String nameSevice, double areaUse, double price, int person, int daily, String freeSevice) {
-        super(nameSevice, areaUse, price, person, daily);
+    public Room(String nameSevice, double areaUse, double price, int person, int daily, int serviceId, String freeSevice) {
+        super(nameSevice, areaUse, price, person, daily, serviceId);
         this.freeSevice = freeSevice;
     }
 

@@ -1,5 +1,5 @@
 package services;
 
 public interface IEmployeeService extends IService{
-    void edit();
+    public void edit();
 }

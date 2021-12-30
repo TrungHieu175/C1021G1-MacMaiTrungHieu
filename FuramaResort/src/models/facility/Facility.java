@@ -6,7 +6,7 @@ public abstract class Facility {
     private double price;
     private int person;
     private int daily;
-
+    private int serviceId;
     public Facility() {
     }
 
@@ -18,7 +18,17 @@ public abstract class Facility {
                 ", price=" + price +
                 ", person=" + person +
                 ", daily=" + daily +
+                ", serviceId=" + serviceId +
                 '}';
+    }
+
+    public Facility(String nameSevice, double areaUse, double price, int person, int daily, int serviceId) {
+        this.nameSevice = nameSevice;
+        this.areaUse = areaUse;
+        this.price = price;
+        this.person = person;
+        this.daily = daily;
+        this.serviceId = serviceId;
     }
 
     public String getNameSevice() {
@@ -61,11 +71,11 @@ public abstract class Facility {
         this.daily = daily;
     }
 
-    public Facility(String nameSevice, double areaUse, double price, int person, int daily) {
-        this.nameSevice = nameSevice;
-        this.areaUse = areaUse;
-        this.price = price;
-        this.person = person;
-        this.daily = daily;
+    public int getServiceId() {
+        return serviceId;
+    }
+
+    public void setServiceId(int serviceId) {
+        this.serviceId = serviceId;
     }
 }

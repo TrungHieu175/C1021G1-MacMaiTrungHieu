@@ -1,5 +1,5 @@
 package services;
 
 public interface IFacilityService extends IService {
-    void maintenance();
+    public void maintenance();
 }
