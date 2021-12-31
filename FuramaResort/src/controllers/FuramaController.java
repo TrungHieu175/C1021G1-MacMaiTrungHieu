@@ -214,15 +214,15 @@ public class FuramaController {
             }
             switch (choice) {
                 case 1:
-                    facilityService.add();
+                    facilityService.addVilla();
                     checkChoice = true;
                     continue;
                 case 2:
-                    //
+                    facilityService.addHouse();
                     checkChoice = true;
                     continue;
                 case 3:
-                    //
+                    facilityService.addRoom();
                     checkChoice = true;
                     continue;
                 case 4:
