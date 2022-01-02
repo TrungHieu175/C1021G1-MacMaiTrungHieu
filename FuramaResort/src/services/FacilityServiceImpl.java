@@ -37,7 +37,14 @@ public class FacilityServiceImpl implements IFacilityService {
         System.out.println("Nhập diện tích hồ bơi");
         Double areaPool = Double.parseDouble(scanner.nextLine());
         System.out.println("Nhập số tầng");
-        Integer stage = Integer.parseInt(scanner.nextLine());
+        int stage;
+        String stageString = scanner.nextLine();
+        while (!isInt(stageString)){
+            System.out.println("Phải nhập định dạng số");
+            System.out.println("Nhập số tầng");
+            stageString = scanner.nextLine();
+        }
+        stage = Integer.parseInt(stageString);
         Villa villa = new Villa(nameSevice, areaUse, price, person, daily, serviceId, classRoom, areaPool, stage);
         facilityMap.put(villa, 0);
     }
@@ -111,6 +118,24 @@ public class FacilityServiceImpl implements IFacilityService {
     public void display() {
         for (Map.Entry<Facility, Integer> facilityIntegerEntry : facilityMap.entrySet()) {
             System.out.println(facilityIntegerEntry);
+        }
+    }
+    boolean isDouble(String str){
+        try {
+            Double.parseDouble(str);
+            return true;
+        }
+        catch (NumberFormatException e) {
+            return false;
+        }
+    }
+    boolean isInt(String str2){
+        try {
+            Integer.parseInt(str2);
+            return true;
+        }
+        catch (NumberFormatException e) {
+            return false;
         }
     }
 }

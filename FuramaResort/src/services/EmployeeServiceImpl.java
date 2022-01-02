@@ -115,7 +115,6 @@ public class EmployeeServiceImpl implements IEmployeeService{
             System.out.println("Lương nè: " + employee.getSalary());
         }
     }
-
     boolean isDouble(String str) {
         try {
             Double.parseDouble(str);
@@ -125,3 +124,4 @@ public class EmployeeServiceImpl implements IEmployeeService{
         }
     }
 }
+
