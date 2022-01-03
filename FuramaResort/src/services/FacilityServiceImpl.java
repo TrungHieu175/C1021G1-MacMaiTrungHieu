@@ -23,19 +23,61 @@ public class FacilityServiceImpl implements IFacilityService {
         System.out.println("Nhập tên dịch zụ");
         String nameSevice = scanner.nextLine();
         System.out.println("Nhập diện tích sử dụng");
-        Double areaUse = Double.parseDouble(scanner.nextLine());
+        double areaUse;
+        String areaUseString = scanner.nextLine();
+        while (!isDouble(areaUseString)){
+            System.out.println("Phải nhập định dạng số");
+            System.out.println("Nhập diện tích sử dụng");
+            areaUseString = scanner.nextLine();
+        }
+        areaUse = Integer.parseInt(areaUseString);
         System.out.println("Nhập giá thuê");
-        Double price = Double.parseDouble(scanner.nextLine());
+        double price;
+        String priceString = scanner.nextLine();
+        while (!isDouble(priceString)){
+            System.out.println("Phải nhập định dạng số");
+            System.out.println("Nhập giá thuê");
+            priceString = scanner.nextLine();
+        }
+        price = Integer.parseInt(priceString);
         System.out.println("Nhập số lượng người");
-        Integer person = Integer.parseInt(scanner.nextLine());
+        int person;
+        String personString = scanner.nextLine();
+        while (!isInt(personString)){
+            System.out.println("Phải nhập định dạng số");
+            System.out.println("Nhập số lượng người");
+            personString = scanner.nextLine();
+        }
+        person = Integer.parseInt(personString);
         System.out.println("Nhập số ngày thuê");
-        Integer daily = Integer.parseInt(scanner.nextLine());
+        int daily;
+        String dailyString = scanner.nextLine();
+        while (!isInt(dailyString)){
+            System.out.println("Phải nhập định dạng số");
+            System.out.println("Nhập số ngày thuê");
+            dailyString = scanner.nextLine();
+        }
+        daily = Integer.parseInt(dailyString);
         System.out.println("Nhập mã dịch vụ");
-        Integer serviceId = Integer.parseInt(scanner.nextLine());
+        int serviceId;
+        String serviceIdString = scanner.nextLine();
+        while (!isInt(serviceIdString)){
+            System.out.println("Phải nhập định dạng số");
+            System.out.println("Nhập số ID");
+            serviceIdString = scanner.nextLine();
+        }
+        serviceId = Integer.parseInt(serviceIdString);
         System.out.println("Nhập kiểu phòng");
         String classRoom = scanner.nextLine();
         System.out.println("Nhập diện tích hồ bơi");
-        Double areaPool = Double.parseDouble(scanner.nextLine());
+        double areaPool;
+        String areaPoolString = scanner.nextLine();
+        while (!isDouble(areaPoolString)){
+            System.out.println("Phải nhập định dạng số");
+            System.out.println("Nhập diện tích hồ bơi");
+            areaPoolString = scanner.nextLine();
+        }
+        areaPool = Integer.parseInt(areaPoolString);
         System.out.println("Nhập số tầng");
         int stage;
         String stageString = scanner.nextLine();
