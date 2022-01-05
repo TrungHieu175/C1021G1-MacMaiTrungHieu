@@ -38,7 +38,6 @@ public class FuramaController {
             System.out.println(THUT + "Enter your selection");
             try {
                 choice = Integer.parseInt(scanner.nextLine());
-                ;
             } catch (NumberFormatException e) {
                 System.out.println("You dump bro?");
                 checkChoice = true;
