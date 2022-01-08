@@ -1,9 +1,5 @@
 package module2.utils;
 
-import test.model.Person;
-import test.model.Student;
-import test.model.Teacher;
-
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;

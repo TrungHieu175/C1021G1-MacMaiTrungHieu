@@ -1,7 +1,6 @@
 package module2.Controller;
 
 import module2.utils.Validation;
-import test.model.Person;
 
 import java.util.Scanner;
 
