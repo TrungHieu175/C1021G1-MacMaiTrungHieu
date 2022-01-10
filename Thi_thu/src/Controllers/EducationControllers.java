@@ -10,7 +10,6 @@ import java.util.List;
 import java.util.Scanner;
 
 public class EducationControllers {
-    List<Integer> student = new ArrayList<>();
     static Scanner scanner = new Scanner(System.in);
     static int choice;
     static boolean checkChoice = false;

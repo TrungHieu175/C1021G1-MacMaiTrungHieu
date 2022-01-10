@@ -62,31 +62,30 @@ public class StudentService implements IService {
 //            System.out.println("Mã số sinh viên " + student.getId());
 //            System.out.println("Tên sinh viên " + student.getName());
 //            System.out.println("Ngày tháng năm sinh " + student.getBirthDay());
-            System.out.println("Nhập id muốn xóa");
-            String id = scanner.nextLine();
-            for (int i = 0; i < studentList.size(); i++) {
-                if (studentList.get(i).getId().equals(id)) {
-                    do {
-                        System.out.println("Bạn có muốn xóa sinh viên có ID " + id + " không?");
-                        System.out.println("YES or NO");
-                        String yes = scanner.nextLine();
-                        if (yes.equals("YES")) {
-                            studentList.remove(i);
-                            System.out.println("Xóa thành công");
-                            break;
-                        } else {
-                            System.out.println("Xóa ko thành công vui lòng nhập đúng định dạng YES or NO");
-                        }
-                    } while (true);
-                }
             }//            System.out.println("Giới tính " + student.getGender());
 //            System.out.println("Sinh viên lớp " + student.getNameClass());
 //            System.out.println("Bảng điểm " + student.getPoin());
         }
-    }
 
     public void remove() {
-
+        System.out.println("Nhập id muốn xóa");
+        String id = scanner.nextLine();
+        for (int i = 0; i < studentList.size(); i++) {
+            if (studentList.get(i).getId().equals(id)) {
+                do {
+                    System.out.println("Bạn có muốn xóa sinh viên có ID " + id + " không?");
+                    System.out.println("YES or NO");
+                    String yes = scanner.nextLine();
+                    if (yes.equals("YES")) {
+                        studentList.remove(i);
+                        System.out.println("Xóa thành công");
+                        break;
+                    } else {
+                        System.out.println("Xóa ko thành công vui lòng nhập đúng định dạng YES or NO");
+                    }
+                } while (true);
+            }
+        }
     }
 
     public void find() {
