@@ -1,19 +1,19 @@
 use case_study;
 CREATE TABLE vi_tri(
-ma_vi_tri INT NOT NULL auto_increment,
+ma_vi_tri INT auto_increment,
 ten_vi_tri VARCHAR(45),
- PRIMARY KEY (ma_vi_tri)
+PRIMARY KEY (ma_vi_tri)
 );
 CREATE TABLE trinh_do (
-  ma_trinh_do INT NOT NULL auto_increment,
+  ma_trinh_do INT auto_increment,
   ten_trinh_do VARCHAR(45),
   PRIMARY KEY (ma_trinh_do));
 CREATE TABLE bo_phan (
-  ma_bo_phan INT NOT NULL auto_increment,
+  ma_bo_phan INT auto_increment,
   ten_bo_phan VARCHAR(45),
   PRIMARY KEY (ma_bo_phan));
 CREATE TABLE nhan_vien (
-  ma_nhan_vien INT NOT NULL AUTO_INCREMENT,
+  ma_nhan_vien INT AUTO_INCREMENT,
   ho_ten VARCHAR(45) NULL,
   ngay_sinh DATE NULL,
   so_cmnd VARCHAR(45) NULL,
