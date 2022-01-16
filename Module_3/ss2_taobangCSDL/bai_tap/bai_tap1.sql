@@ -1,0 +1,60 @@
+create database chuyendoiErd;
+use chuyendoiErd;
+CREATE TABLE PhieuXuat
+(
+    SoPx   INT         NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    NgayXuat DATETIME    NOT NULL
+);
+CREATE TABLE VatTu
+(
+    MaVTU   INT         NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    TenVTU VARCHAR(30)   NOT NULL
+);
+CREATE TABLE BoxVatTuXuat
+(
+    DGXuat   INT         NOT NULL,
+    SLXuat int NOT NULL,
+	SoPx   INT,
+    MaVTU   INT,
+    PRIMARY KEY (SoPx,MaVTU),
+    FOREIGN KEY (SoPx) REFERENCES PhieuXuat (SoPx),
+    FOREIGN KEY (MaVTU) REFERENCES VatTu (MaVTU)
+);
+CREATE TABLE PhieuNhap
+(
+    SoPN   INT         NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    NgayNhap datetime  NOT NULL
+);
+CREATE TABLE BoxVatTuNhap
+(
+    DGNhap   INT         NOT NULL,
+    NgayNhap DATETIME NOT NULL,
+	SoPN   INT,
+    MaVTU   INT,
+    PRIMARY KEY (SoPN,MaVTU),
+    FOREIGN KEY (SoPN) REFERENCES PhieuNhap (SoPN),
+    FOREIGN KEY (MaVTU) REFERENCES VatTu (MaVTU)
+);
+CREATE TABLE DonDH
+(
+    SoDH   INT         NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    NgayDH DATETIME    NOT NULL,
+    MaVTU   INT
+);
+CREATE TABLE BoxDonDHVatTu
+(
+	SoDH   INT,
+    MaVTU   INT,
+    PRIMARY KEY (SoDH,MaVTU),
+    FOREIGN KEY (SoDH) REFERENCES DonDH (SoDH),
+    FOREIGN KEY (MaVTU) REFERENCES VatTu (MaVTU)
+);
+CREATE TABLE NhaCC
+(
+    MaNCC   INT         NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    TenNCC varchar(30)    NOT NULL,
+    DiaChi   varchar(50),
+    SDT INT,
+    SoDH   INT,
+    FOREIGN KEY (SoDH) REFERENCES DonDH (SoDH)
+);
