@@ -30,11 +30,47 @@ BEGIN
 END //
 DELIMITER ;
 call getall();
+
 DELIMITER //
-create procedure addnew()
+create procedure addnew(
+In products_name varchar(50)
+)
 BEGIN
 
-insert 
+insert into Products (productName)
+values (products_name);
 
 END //
 DELIMITER ;
+call addnew('tu lanh');
+
+select productName from Products;
+
+DELIMITER //
+create procedure updatenew(
+In product_Id int
+)
+BEGIN
+
+update Products
+set productDescription = 'xai di roi biet'
+where productCode = (product_Id);
+
+END //
+DELIMITER ;
+call updatenew(1);
+
+DELIMITER //
+create procedure removenew(
+In product_Id int
+)
+BEGIN
+
+DELETE FROM Products
+WHERE id = product_Id;
+
+END //
+DELIMITER ;
+call removenew(3);
+
+select * from Products
