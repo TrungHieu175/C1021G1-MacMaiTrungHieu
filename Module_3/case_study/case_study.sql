@@ -172,6 +172,8 @@ values
 (3, 1),
 (2, 2),
 (2, 2);
-select ho_ten from nhan_vien where ho_ten = 'H%' and 'T%' or 'K%';
-select * from dich_vu;
-select * from khach_hang;
+-- task 2
+select * from nhan_vien where (ho_ten like 'H%' or ho_ten like'T%' or ho_ten like 'K%') and length(ho_ten) < 15;
+-- task 3
+select * from khach_hang where dia_chi in('Đà Nẵng','Quảng Nam') and (curdate() - ngay_sinh > (18*30*365) and curdate() - ngay_sinh < (50*30*365))
+-- task 4

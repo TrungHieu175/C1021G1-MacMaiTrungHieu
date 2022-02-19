@@ -11,6 +11,10 @@
     <title>$Title$</title>
   </head>
   <body>
+  <form action="/customers" method="post">
+    <input type="text" name = "a">
+    <input type="submit" value="Send">
+  </form>
   $END$
   </body>
 </html>
